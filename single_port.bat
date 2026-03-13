@@ -24,7 +24,7 @@ if not exist backend\static\index.html (
     cd ..
     
     echo [2/2] 复制构建文件...
-    "C:\ProgramData\miniconda3\python.exe" -c "import shutil; shutil.copytree('frontend/build', 'backend/static', dirs_exist_ok=True)"
+    "C:\python312\python.exe" -c "import shutil; shutil.copytree('frontend/build', 'backend/static', dirs_exist_ok=True)"
     echo ✅ 构建完成
     echo.
 ) else (
@@ -40,7 +40,7 @@ echo ✨ 前后端已集成，无CORS问题！
 echo ================================================
 
 cd backend
-"C:\ProgramData\miniconda3\python.exe" run.py
+"C:\python312\python.exe" run.py
 
 echo.
 echo 👋 服务已关闭
