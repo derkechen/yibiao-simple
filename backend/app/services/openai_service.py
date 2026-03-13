@@ -33,7 +33,7 @@ class OpenAIService:
             chat_models = []
             for model in models.data:
                 model_id = model.id.lower()
-                if any(keyword in model_id for keyword in ['gpt', 'claude', 'chat', 'llama', 'qwen', 'deepseek']):
+                if any(keyword in model_id for keyword in ['gpt', 'claude', 'chat', 'llama', 'qwen', 'deepseek', 'glm', 'longcat']):
                     chat_models.append(model.id)
             return sorted(list(set(chat_models)))
         except Exception as e:
